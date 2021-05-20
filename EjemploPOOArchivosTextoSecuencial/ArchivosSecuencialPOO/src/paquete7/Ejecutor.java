@@ -3,23 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package paquete6;
+package paquete7;
 
 /**
  *
  * @author Usuario
  */
-public class Ejecutar {
+public class Ejecutor {
     public static void main(String[] args) {
-       String fileName = "hospital.txt";
+         String fileName = "hospital.txt";
         
-        Hospital hospital1 = new Hospital("Caritas", 10, 300.55);
-        Hospital hospital2 = new Hospital("Clínica Abendaño", 50, 1900.66);
-        Hospital hospital3 = new Hospital("Solca", 30, 660.20);
+        paquete6.Hospital hospital1 = new paquete6.Hospital("Caritas", 10, 300.55);
+        paquete6.Hospital hospital2 = new paquete6.Hospital("Clínica Abendaño", 50, 1900.66);
+        paquete6.Hospital hospital3 = new paquete6.Hospital("Solca", 30, 660.20);
 
-        Hospital[] listaHospitales = {hospital1, hospital2, hospital3};
+        paquete6.Hospital[] listaHospitales = {hospital1, hospital2, hospital3};
 
-        ArchivoEscritura archivo = new ArchivoEscritura(fileName);
+        paquete6.ArchivoEscritura archivo = new paquete6.ArchivoEscritura(fileName);
 
         for (int i = 0; i < listaHospitales.length; i++) {      
             archivo.establecerRegistro(listaHospitales[i]);       
@@ -27,9 +27,9 @@ public class Ejecutar {
         }
         archivo.cerrarArchivo();
         
-        ArchivoLectura lectura = new ArchivoLectura(fileName);
+        paquete6.ArchivoLectura lectura = new paquete6.ArchivoLectura(fileName);
         lectura.establecerLista();
         System.out.println(lectura);
         lectura.cerrarArchivo();
-    }  
+    }
 }
